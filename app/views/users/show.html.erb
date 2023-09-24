@@ -1,0 +1,28 @@
+
+<p style="color: green"><%= notice %></p>
+
+<%= render @user %>
+
+<div>
+  <%= link_to "Edit this user", edit_user_path(@user) %> |
+  <%= link_to "Back to users", users_path %>
+
+  <%= button_to "Destroy this user", @user, method: :delete %>
+</div>
+
+
+<div>
+  <% if @user.photo.attached? %>
+    <%= image_tag @user.photo %>
+  <% else %>
+    <!-- Provide a default image or placeholder if the user has no photo -->
+    <%= image_tag 'sample.png', alt: 'User Image' %>
+  <% end %>
+</div>
+
+<%= @user.name %>
+
+<%= pluralize(@user.posts.count, 'post') %>
+
+
+<%= link_to "Logout", logout_path, method: :delete %>

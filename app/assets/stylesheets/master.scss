@@ -1,0 +1,37 @@
+$brand-font: 'Satisfy', cursive;
+$main-blue: #00497B;
+
+nav {
+  border-bottom: 1px solid #dbdbdb;
+  background-color: white;
+  height: 76px;
+}
+
+.navbar .navbar-brand {
+  font-family: $brand-font;
+  font-size: 26px;
+  vertical-align: middle;
+  font-weight: bold;
+  color: $main-blue;
+  margin: 5px;
+}
+
+.nav-item {
+  vertical-align: middle;
+  font-weight: 500;
+  margin: 5px;
+
+  a{
+    font-size: 16px;
+  }
+}
+
+.navbar-expand-lg .navbar-nav {
+  position: absolute;
+
+  li {
+    padding-left: 5px;
+    font-weight: 100;
+    font-size: 12px;
+  }
+}
